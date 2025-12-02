@@ -1,0 +1,209 @@
+/* --- Light Theme Section Wrapper --- */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  /* Light, clean background */
+  background: linear-gradient(135deg, #f4f7fa, #ffffff);
+  min-height: 90vh;
+  font-family: "Inter", sans-serif;
+  scroll-margin-top: 0.5vh;
+}
+
+/* --- Main Container (White Card with Shadow) --- */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+
+  /* Clean white card look */
+  background: #ffffff;
+  border: 1px solid #e2e8f0; /* Subtle light gray border */
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Lighter shadow for light theme */
+  overflow: hidden;
+}
+
+/* --- Left Side: Info Section (Light Blue-Gray Background) --- */
+.contact-info {
+  flex: 1;
+  padding: 50px;
+  background: #f8fafc; /* Very light subtle background for contrast */
+  min-width: 350px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: #1e293b; /* Dark text for high contrast */
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.contact-desc {
+  color: #475569; /* Slightly lighter body text */
+  line-height: 1.7;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* --- Info Grid for details --- */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e8f0; /* Light divider */
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item svg {
+  color: #0891b2; /* Primary accent color (Cyan/Teal) */
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.info-value {
+  font-size: 1.05rem;
+  color: #334155; /* Dark text */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.info-value:hover {
+  color: #0891b2; /* Accent hover color */
+}
+
+/* --- Right Side: Form --- */
+.contact-form {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 350px;
+}
+
+.form-heading {
+  font-size: 1.8rem;
+  color: #1e293b; /* Dark heading */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #475569; /* Dark label */
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* --- Inputs & Textarea --- */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: #ffffff; /* White input background */
+  border: 1px solid #cbd5e1; /* Light gray border */
+  border-radius: 10px;
+  color: #1e293b; /* Dark input text */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+/* Change placeholder color for visibility on light theme */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Focus Effect (Primary Color Glow) */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0891b2; /* Cyan glow */
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(8, 145, 178, 0.2);
+}
+
+/* --- Button (Accent Color) --- */
+.submit-btn {
+  margin-top: 15px;
+  padding: 16px;
+  /* Gradient using accent color */
+  /* background: linear-gradient(
+    135deg,
+    #0891b2,
+    #06b6d4
+  );  */
+  color: black; /* White text on dark button */
+  border: 1px solid rgb(135, 135, 135);
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(8, 145, 178, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 30px;
+    min-width: unset;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
